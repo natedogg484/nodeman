@@ -1,8 +1,8 @@
 var inquirer = require("inquirer");
 
 let letterGuesss = ""
-
-// var word = require("./word.js");
+var letter = require("./letter.js");
+var word = require("./word.js");
 
 var compWords = [
     "Mozart",
@@ -41,7 +41,9 @@ inquirer
                         message: "guess your letter!"
                     }
                 ]
-            )
+            ).then(function(selection){
+                console.log(selection)
+            })
         }
         else{
             console.log("Alright, maybe later then...")
